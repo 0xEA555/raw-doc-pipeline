@@ -1,22 +1,32 @@
 [
-  {"id":"c1","title":"Tutto Bene — Episode 1","type":"youtube","shoot":"Tutto Bene","status":"in_progress","notes":"Markers + day stringouts underway. First deliverable — priority.","frameio_url":"","youtube_url":""},
-  {"id":"c2","title":"Tutto Bene — Sizzle Reel","type":"cutdown","shoot":"Tutto Bene","status":"not_started","notes":"Pulled after ep 1 marking is complete.","frameio_url":"","youtube_url":""},
-  {"id":"c3","title":"Nurburgring AMG — Episode","type":"youtube","shoot":"Nurburgring AMG","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c4","title":"Le Mans — Story Cut Part 1","type":"youtube","shoot":"Le Mans","status":"in_progress","notes":"RS-9 story cut delivered, in review.","frameio_url":"","youtube_url":""},
-  {"id":"c5","title":"Le Mans / Daytona — Story Cut Part 2","type":"youtube","shoot":"Le Mans / Daytona","status":"not_started","notes":"RS-10 marking + stringouts stage.","frameio_url":"","youtube_url":""},
-  {"id":"c6","title":"LA Doc — Episode","type":"youtube","shoot":"LA Doc","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c7","title":"Germany — Episode","type":"youtube","shoot":"Germany","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c8","title":"Monterey — Episode","type":"youtube","shoot":"Monterey","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c9","title":"Italy — Episode","type":"youtube","shoot":"Italy","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c10","title":"Nico — Art Cars","type":"cutdown","shoot":"Nurburgring AMG","status":"not_started","notes":"Topical cutdown ready to pull per EA's editing-time proposal.","frameio_url":"","youtube_url":""},
-  {"id":"c11","title":"James — Car Mag Interview","type":"cutdown","shoot":"LA Doc","status":"not_started","notes":"Topical cutdown ready to pull.","frameio_url":"","youtube_url":""},
-  {"id":"c12","title":"Carlos / Belgian Ninjas — Oz BTS","type":"cutdown","shoot":"Le Mans","status":"not_started","notes":"Topical cutdown ready to pull.","frameio_url":"","youtube_url":""},
-  {"id":"c13","title":"Touring the AMG — James & Gordian","type":"cutdown","shoot":"Nurburgring AMG","status":"not_started","notes":"Topical cutdown ready to pull.","frameio_url":"","youtube_url":""},
-  {"id":"c14","title":"Tutto Bene — Raw Selects","type":"raw","shoot":"Tutto Bene","status":"in_progress","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c15","title":"Le Mans — Raw Selects","type":"raw","shoot":"Le Mans","status":"in_progress","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c16","title":"Nurburgring AMG — Raw Selects","type":"raw","shoot":"Nurburgring AMG","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c17","title":"Social Clip — Tutto Bene Teaser","type":"clip","shoot":"Tutto Bene","status":"not_started","notes":"Vertical cut for socials once ep 1 locks.","frameio_url":"","youtube_url":""},
-  {"id":"c18","title":"Social Clip — Le Mans Moment","type":"clip","shoot":"Le Mans","status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-  {"id":"c19","title":"iPhone / Ray-Ban Footage — Ingest Batch","type":"raw","shoot":"Unassigned","status":"in_progress","notes":"Exporting now — assign to shoot once sorted.","frameio_url":"","youtube_url":""},
-  {"id":"c20","title":"Before The Shift — Feature Doc","type":"feature","shoot":"All shoots","status":"not_started","notes":"Long-arc cut, compounding value of all footage across the series.","frameio_url":"","youtube_url":""}
+  {"id":"la1-p1","title":"LA-1 — Episode","type":"youtube","shoot":"LA - 1","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Aug 2025.","frameio_url":"","youtube_url":""},
+
+  {"id":"day-p1","title":"Daytona — Part 1","type":"youtube","shoot":"Daytona","part":1,"parts":2,"status":"in_progress","notes":"Story cut done (RS-10). Jan 2026.","frameio_url":"","youtube_url":""},
+  {"id":"day-p2","title":"Daytona — Part 2","type":"youtube","shoot":"Daytona","part":2,"parts":2,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
+
+  {"id":"ger1-p1","title":"Germany 1 / AMG 1 — Part 1","type":"youtube","shoot":"Germany 1 - AMG 1","part":1,"parts":2,"status":"not_started","notes":"Ingested, day stringouts done. Nürburgring, Mar 2026. Story spine set in LA-2 session.","frameio_url":"","youtube_url":""},
+  {"id":"ger1-p2","title":"Germany 1 / AMG 1 — Part 2","type":"youtube","shoot":"Germany 1 - AMG 1","part":2,"parts":2,"status":"not_started","notes":"Ingested, day stringouts done.","frameio_url":"","youtube_url":""},
+
+  {"id":"la2-p1","title":"LA-2 — Episode","type":"youtube","shoot":"LA - 2","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Apr 2026: podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting.","frameio_url":"","youtube_url":""},
+
+  {"id":"la3-p1","title":"LA-3 — Episode","type":"youtube","shoot":"LA - 3","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. May 2026: AMG 4-door electric coupe launch.","frameio_url":"","youtube_url":""},
+
+  {"id":"lm-p1","title":"Le Mans — Part 1","type":"youtube","shoot":"Le Mans + AMG 2","part":1,"parts":3,"status":"in_progress","notes":"Story cut done (RS-9), handoff doc to Carlos. Jun 2026.","frameio_url":"","youtube_url":""},
+  {"id":"lm-p2","title":"Le Mans — Part 2","type":"youtube","shoot":"Le Mans + AMG 2","part":2,"parts":3,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
+  {"id":"lm-p3","title":"AMG Visit 2","type":"youtube","shoot":"Le Mans + AMG 2","part":3,"parts":3,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
+
+  {"id":"mty-p1","title":"Monterey Car Week — Episode","type":"youtube","shoot":"Monterey Car Week","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Aug 2026.","frameio_url":"","youtube_url":""},
+
+  {"id":"tb-p1","title":"Tutto Bene — Episode 1","type":"youtube","shoot":"Tutto Bene 2026","part":1,"parts":2,"status":"in_progress","notes":"Priority deliverable. Markers in process. First shoot with audio sync solved.","frameio_url":"","youtube_url":""},
+  {"id":"tb-p2","title":"Tutto Bene — Episode 2","type":"youtube","shoot":"Tutto Bene 2026","part":2,"parts":2,"status":"not_started","notes":"","frameio_url":"","youtube_url":""},
+
+  {"id":"cd-nico","title":"Nico — Art Cars","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown from EA's editing-time plan. Source shoot to confirm.","frameio_url":"","youtube_url":""},
+  {"id":"cd-carmag","title":"James — Car Mag Interview","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
+  {"id":"cd-carlos","title":"Carlos, Belgian Ninjas & Oz — BTS","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
+  {"id":"cd-tour","title":"Touring the AMG — James & Gordian","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
+  {"id":"cd-sizzle","title":"Sizzle Reel","type":"cutdown","shoot":"All shoots","status":"not_started","notes":"After Tutto ep 1 and full marking pass.","frameio_url":"","youtube_url":""},
+
+  {"id":"raw-iphone","title":"iPhone / Ray-Ban Footage — Ingest","type":"raw","shoot":"","status":"in_progress","notes":"Exporting now. Assign to shoot once sorted.","frameio_url":"","youtube_url":""},
+
+  {"id":"feature","title":"Before The Shift — Feature Doc","type":"feature","shoot":"All shoots","status":"not_started","notes":"Long-arc cut across the full series.","frameio_url":"","youtube_url":""}
 ]

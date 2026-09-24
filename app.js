@@ -70,6 +70,12 @@
     }).join("");
   }
 
+  function metaLine(c){
+    var s = c.shoot || "Unassigned";
+    if (c.part && c.parts && c.parts > 1) s += " · Part " + c.part + " of " + c.parts;
+    return s;
+  }
+
   function cardHTML(c){
     var si = statusInfo(c.status);
     var ti = typeInfo(c.type);
@@ -78,7 +84,7 @@
         '<div class="card-title">' + escapeHTML(c.title) + '</div>' +
         '<span class="type-dot" style="background:' + ti.color + '"></span>' +
       '</div>' +
-      '<div class="card-meta">' + escapeHTML(c.shoot || "Unassigned") + '</div>' +
+      '<div class="card-meta">' + escapeHTML(metaLine(c)) + '</div>' +
       '<span class="status-pill" style="color:' + si.fg + ';background:' + si.bg + '">' + si.label + '</span>' +
       (c.notes ? '<div class="card-notes">' + escapeHTML(c.notes) + '</div>' : '') +
     '</button>';
@@ -116,7 +122,7 @@
     inner.innerHTML =
       '<button class="dialog-close" data-close>&times;</button>' +
       '<h2>' + escapeHTML(c.title) + '</h2>' +
-      '<div class="card-meta">' + escapeHTML(ti.label) + ' · ' + escapeHTML(c.shoot || "Unassigned") + '</div>' +
+      '<div class="card-meta">' + escapeHTML(ti.label) + ' · ' + escapeHTML(metaLine(c)) + '</div>' +
       '<div class="dialog-field"><span class="status-pill" style="color:' + si.fg + ';background:' + si.bg + '">' + si.label + '</span></div>' +
       (c.notes ? '<div class="dialog-field"><div class="dialog-label">Notes</div>' + escapeHTML(c.notes) + '</div>' : '') +
       frameBlock + ytBlock;
