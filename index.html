@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAW Doc — Pipeline</title>
+<meta name="description" content="Before The Shift / RAW Doc content pipeline — production, cutdowns, and release tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <div class="eyebrow">RACE SERVICE · BEFORE THE SHIFT</div>
+    <h1>RAW Doc Pipeline</h1>
+    <p class="sub">Every derived piece, mapped to its parent shoot — production status, cutdown queue, and what's shipped.</p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" id="group-seg" role="tablist" aria-label="Group by">
+      <button class="seg-btn is-active" data-group="shoot" role="tab" aria-selected="true">By shoot</button>
+      <button class="seg-btn" data-group="type" role="tab" aria-selected="false">By type</button>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <main class="board" id="board"></main>
+
+  <footer class="page-footer">
+    <span>Read-only for now — status changes go through the team tracker until the write-back pass ships.</span>
+  </footer>
+</div>
+
+<dialog id="card-dialog">
+  <div class="dialog-inner" id="dialog-inner"></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
