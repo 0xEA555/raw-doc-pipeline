@@ -6,9 +6,9 @@ const shoots = JSON.parse(fs.readFileSync(path.join(root, "data/shoots.json"), "
 const pieces = JSON.parse(fs.readFileSync(path.join(root, "data/pieces.json"), "utf8"));
 const STEP = ["done", "in_progress", "not_started", "issue"];
 const KIND = ["production", "supporting", "unsorted", "planned"];
-const TYPE = ["youtube", "raw", "cutdown", "clip", "sizzle", "feature"];
+const TYPE = ["spine", "youtube", "raw", "cutdown", "clip", "sizzle", "feature"];
 const STAGE = ["not_started", "rough", "rs_treatment", "rs_approval", "published"];
-const SPINE = ["not_started", "scheduled", "shot", "delivered", null];
+const SPINE = ["not_started", "scheduled", "shot", "delivered"];
 const errs = [];
 const sid = new Set(), pid = new Set();
 shoots.forEach(s => {
@@ -23,14 +23,24 @@ pieces.forEach(p => {
 });
 pieces.forEach(p => {
   if (!TYPE.includes(p.type)) errs.push(`${p.id}: bad type ${p.type}`);
-  if (!STAGE.includes(p.stage)) errs.push(`${p.id}: bad stage ${p.stage}`);
-  if (!SPINE.includes(p.spine)) errs.push(`${p.id}: bad spine ${p.spine}`);
-  if (p.type === "youtube" && p.spine == null) errs.push(`${p.id}: YouTube episodes need a spine state`);
+  if (p.type === "spine") {
+    if (!SPINE.includes(p.status)) errs.push(`${p.id}: bad spine status ${p.status}`);
+    if (!p.for_episode || !pid.has(p.for_episode)) errs.push(`${p.id}: unknown for_episode ${p.for_episode}`);
+  } else {
+    if (!STAGE.includes(p.stage)) errs.push(`${p.id}: bad stage ${p.stage}`);
+    if (p.type === "youtube" && (!p.spine_id || !pid.has(p.spine_id))) errs.push(`${p.id}: YouTube episodes need a valid spine_id`);
+  }
   if (p.shoot && p.shoot !== "all" && !sid.has(p.shoot)) errs.push(`${p.id}: unknown shoot ${p.shoot}`);
   (p.also_from || []).forEach(k => { if (!sid.has(k)) errs.push(`${p.id}: unknown also_from ${k}`); });
   if (p.parent && !pid.has(p.parent)) errs.push(`${p.id}: unknown parent ${p.parent}`);
   let cur = p, seen = new Set();
   while (cur && cur.parent) { if (seen.has(cur.id)) { errs.push(`${p.id}: parent loop`); break; } seen.add(cur.id); cur = pieces.find(x => x.id === cur.parent); }
+});
+// spine_id back-references must actually point at a spine-type piece
+pieces.forEach(p => {
+  if (p.spine_id && (!pid.has(p.spine_id) || pieces.find(x => x.id === p.spine_id).type !== "spine")) {
+    errs.push(`${p.id}: spine_id ${p.spine_id} is not a spine piece`);
+  }
 });
 if (errs.length) { console.error("INVALID\n" + errs.join("\n")); process.exit(1); }
 console.log(`OK: ${shoots.length} shoots, ${pieces.length} pieces`);

@@ -18,6 +18,7 @@
   --ty-sizzle: #2E6B3E;
   --ty-feature: #6A3E8A;
   --ty-raw: #2D6E73;
+  --ty-spine: #9C3F52;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -27,11 +28,11 @@
     --prog-fg: #E8B870; --prog-bg: #3A2C15;
     --none-fg: #9A917F; --none-bg: #2E2A22;
     --issue-fg: #F0A090; --issue-bg: #3D1F19;
-    --ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD;
+    --ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD; --ty-spine: #E38FA3;
   }
 }
 :root[data-theme="dark"]{
---ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD;
+--ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD; --ty-spine: #E38FA3;
   --bg: #1C1915; --bg-card: #262219; --bg-sunk: #211E17;
   --ink: #F1ECE1; --ink-soft: #B3AA98; --line: #3A342A;
   --done-fg: #8FD1A0; --done-bg: #1F3526;
@@ -120,6 +121,8 @@ dialog#card-dialog::backdrop{ background:rgba(20,16,10,.45); }
 .chain-list li{ font:600 12px "Archivo",sans-serif; padding:5px 10px; border-radius:8px; }
 .dialog-link{ color:var(--accent); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px; }
 .dialog-link:hover{ text-decoration:underline; }
+.dialog-link-btn{ font:600 13px "Archivo",sans-serif; color:var(--accent); background:none; border:none; padding:0; margin-left:4px; cursor:pointer; text-decoration:none; }
+.dialog-link-btn:hover{ text-decoration:underline; }
 .frame-embed{ width:100%; aspect-ratio:16/9; border:1px solid var(--line); border-radius:10px; background:#000; }
 
 /* ---- EA Productions mark ---- */

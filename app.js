@@ -17,7 +17,8 @@
   ];
   var KINDS = { production: "Production", supporting: "Supporting", unsorted: "To sort", planned: "Planned" };
   var TYPES = [
-    {key: "youtube", label: "YouTube cut",          spec: "12–20 min",    color: "var(--ty-youtube)", desc: "The priority. Narrative spine shot on the FX3 at RS with James."},
+    {key: "spine",   label: "Spine",                spec: "FX3 · Carlos · James", color: "var(--ty-spine)", desc: "Narrative spine interview, shot separately at RS — its own mini production that a YouTube cut is built around."},
+    {key: "youtube", label: "YouTube cut",          spec: "12–20 min",    color: "var(--ty-youtube)", desc: "The priority. Depends on its narrative spine, shot on the FX3 at RS with James."},
     {key: "raw",     label: "RAW cut",              spec: "Multi-hour",   color: "var(--ty-raw)",     desc: "Nearly uncut, premiered or livestreamed. Audio pass and sensitive content removed; everything else plays out."},
     {key: "cutdown", label: "Topical cutdown",      spec: "Mini episode", color: "var(--ty-cutdown)", desc: "A mini episode built around one experience."},
     {key: "clip",    label: "Clip",                 spec: "10–90 sec",    color: "var(--ty-clip)",    desc: "BTS moments for social."},
@@ -84,11 +85,15 @@
   }
   function childrenOf(id){ return pieces.filter(function(p){ return p.parent === id; }); }
   function rootShoot(p){
+    if (p && p.type === "spine" && p.for_episode && byPiece[p.for_episode]) return rootShoot(byPiece[p.for_episode]);
     var cur = p, guard = 0;
     while (cur && cur.parent && byPiece[cur.parent] && guard++ < 20) cur = byPiece[cur.parent];
     return cur && cur.shoot && byShoot[cur.shoot] ? cur.shoot : null;
   }
   function lineage(p){
+    if (p && p.type === "spine" && p.for_episode && byPiece[p.for_episode]){
+      return ["For " + byPiece[p.for_episode].title, p.title];
+    }
     var out = [], cur = p, guard = 0;
     while (cur && guard++ < 20){
       out.unshift(cur.title);
@@ -114,12 +119,13 @@
       var cut = shoots.filter(function(s){ return (s.stages||{}).story_cut === "done"; }).length;
       items = [[filmed, "filmed"], [planned, "planned"], [ingested, "fully ingested"], [marked, "marked"], [cut, "story cut"]];
     } else {
-      var eps = pieces.filter(function(p){ return p.type === "youtube"; });
-      var spines = eps.filter(function(p){ return (SPINE[p.spine]||{n:0}).n >= 2; }).length;
-      var moving = pieces.filter(function(p){ return chainIndex(p.stage) >= 0 && p.stage !== "published"; }).length;
-      var pub = pieces.filter(function(p){ return p.stage === "published"; }).length;
-      var idle = pieces.filter(function(p){ return chainIndex(p.stage) < 0; }).length;
-      items = [[pieces.length, "total"], [idle, "not started"], [moving, "in progress"], [pub, "published"], [spines + "/" + eps.length, "spines shot"]];
+      var spinePieces = pieces.filter(function(p){ return p.type === "spine"; });
+      var spinesShot = spinePieces.filter(function(p){ return (SPINE[p.status]||{n:0}).n >= 2; }).length;
+      var edited = pieces.filter(function(p){ return p.type !== "spine"; });
+      var moving = edited.filter(function(p){ return chainIndex(p.stage) >= 0 && p.stage !== "published"; }).length;
+      var pub = edited.filter(function(p){ return p.stage === "published"; }).length;
+      var idle = edited.filter(function(p){ return chainIndex(p.stage) < 0; }).length;
+      items = [[pieces.length, "total"], [idle, "not started"], [moving, "in progress"], [pub, "published"], [spinesShot + "/" + spinePieces.length, "spines shot"]];
     }
     document.getElementById("stats").innerHTML = items.map(function(it){
       return '<span><b>' + esc(it[0]) + '</b> ' + esc(it[1]) + '</span>';
@@ -127,7 +133,7 @@
   }
 
   // ---------- pieces tab ----------
-  function spineCls(p){ var n = (SPINE[p.spine]||{n:0}).n; return n === 3 ? "st-done" : n > 0 ? "st-prog" : "st-none"; }
+  function spineStateCls(status){ var n = (SPINE[status]||{n:0}).n; return n === 3 ? "st-done" : n > 0 ? "st-prog" : "st-none"; }
   function chainBar(p){
     var idx = chainIndex(p.stage);
     return '<span class="chain" title="' + esc(chainLabel(p.stage)) + '">' + CHAIN.map(function(step, i){
@@ -155,17 +161,26 @@
   }
   function cardHTML(p){
     var ti = typeInfo(p.type);
-    var src;
-    if (p.parent && byPiece[p.parent]) src = "From " + byPiece[p.parent].title;
-    else {
-      var rs = byShoot[rootShoot(p)];
-      if (rs) src = (rs.name === p.title ? "" : rs.name + " · ") + fmtDate(rs.date);
-      else src = "";
+    var src, facts;
+    if (p.type === "spine"){
+      var ep = byPiece[p.for_episode];
+      src = ep ? "Feeds " + ep.title : "";
+      facts = fact("Status", (SPINE[p.status]||SPINE.not_started).label, spineStateCls(p.status));
+    } else {
+      if (p.parent && byPiece[p.parent]) src = "From " + byPiece[p.parent].title;
+      else {
+        var rs = byShoot[rootShoot(p)];
+        if (rs) src = (rs.name === p.title ? "" : rs.name + " · ") + fmtDate(rs.date);
+        else src = "";
+      }
+      var fo = footage(p);
+      facts = fact("Footage", fo.text, fo.cls);
+      if (p.spine_id && byPiece[p.spine_id]){
+        var sp = byPiece[p.spine_id];
+        facts += fact("Spine", (SPINE[sp.status]||SPINE.not_started).label, spineStateCls(sp.status));
+      }
+      facts += fact("Stage", chainLabel(p.stage), stageCls(p.stage), chainBar(p));
     }
-    var fo = footage(p);
-    var facts = fact("Footage", fo.text, fo.cls);
-    if (p.spine != null) facts += fact("Spine", (SPINE[p.spine]||SPINE.not_started).label, spineCls(p));
-    facts += fact("Stage", chainLabel(p.stage), stageCls(p.stage), chainBar(p));
     if (p.frameio_url) facts += fact("Frame.io", p.frameio_label || "Linked", "st-done");
     return '<button class="card piece-card" data-piece="' + esc(p.id) + '" style="--c:' + ti.color + '">' +
       '<div class="card-head"><span class="type-tag">' + esc(ti.label) + '</span><span class="spec">' + esc(ti.spec) + '</span></div>' +
@@ -267,29 +282,41 @@
   }
 
   // ---------- dialog ----------
+  function jumpBtn(id, label){ return '<button class="dialog-link-btn" data-piece="' + esc(id) + '">' + esc(label) + ' →</button>'; }
   function openPiece(id){
     var p = byPiece[id];
     if (!p) return;
-    var ti = typeInfo(p.type), idx = chainIndex(p.stage);
-    var steps = CHAIN.map(function(step, i){
-      var cls = (p.stage === "published" || i < idx) ? "st-done" : i === idx ? "st-prog" : "st-none";
-      return '<li class="' + cls + '">' + esc(step.label) + '</li>';
-    }).join("");
-    var spine = p.spine == null ? "Optional for this piece" : (SPINE[p.spine]||SPINE.not_started).label;
-    var fo = footage(p);
+    var ti = typeInfo(p.type);
+    var field = function(label, html){ return '<div class="dialog-field"><div class="dialog-label">' + esc(label) + '</div>' + html + '</div>'; };
     var extra = (p.also_from||[]).filter(function(k){ return byShoot[k]; }).map(function(k){ return byShoot[k].name; });
     var kids = childrenOf(p.id);
-    var src = byShoot[rootShoot(p)];
-    var field = function(label, html){ return '<div class="dialog-field"><div class="dialog-label">' + esc(label) + '</div>' + html + '</div>'; };
+    var body;
+    if (p.type === "spine"){
+      var ep = byPiece[p.for_episode];
+      var status = (SPINE[p.status]||SPINE.not_started).label;
+      var fo = footage(p);
+      body = field("Status", esc(status)) +
+        (ep ? field("Feeds", jumpBtn(ep.id, ep.title)) : '') +
+        field("Footage it draws on", esc(fo.text));
+    } else {
+      var idx = chainIndex(p.stage);
+      var steps = CHAIN.map(function(step, i){
+        var cls = (p.stage === "published" || i < idx) ? "st-done" : i === idx ? "st-prog" : "st-none";
+        return '<li class="' + cls + '">' + esc(step.label) + '</li>';
+      }).join("");
+      var fo2 = footage(p);
+      var sp = p.spine_id && byPiece[p.spine_id];
+      body = field("Footage", esc(fo2.text)) +
+        field("Chain", '<ol class="chain-list">' + steps + '</ol>') +
+        (sp ? field("Spine · Carlos · FX3 · James", esc((SPINE[sp.status]||SPINE.not_started).label) + ' ' + jumpBtn(sp.id, "Open spine")) : '');
+    }
     document.getElementById("dialog-inner").innerHTML =
       '<button class="dialog-close" data-close aria-label="Close">&times;</button>' +
       '<div class="dialog-crumb">' + esc(lineage(p).slice(0, -1).join(" › ")) + '</div>' +
       '<h2>' + esc(p.title) + '</h2>' +
       '<div class="card-meta">' + esc(ti.label) + ' · ' + esc(ti.spec) + '</div>' +
       '<p class="dialog-desc">' + esc(ti.desc) + '</p>' +
-      field("Footage", esc(fo.text)) +
-      field("Chain", '<ol class="chain-list">' + steps + '</ol>') +
-      field("Spine · Carlos · FX3 · James", esc(spine)) +
+      body +
       (extra.length ? field("Also draws from", esc(extra.join(", "))) : '') +
       (kids.length ? field("Cut from this", esc(kids.map(function(k){ return k.title; }).join(", "))) : '') +
       (p.notes ? field("Notes", esc(p.notes)) : '') +
@@ -319,6 +346,8 @@
     });
     var dlg = document.getElementById("card-dialog");
     dlg.addEventListener("click", function(e){
+      var jump = e.target.closest("[data-piece]");
+      if (jump){ openPiece(jump.getAttribute("data-piece")); return; }
       if (e.target.closest("[data-close]") || e.target === dlg){
         if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open");
       }
