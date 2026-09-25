@@ -17,6 +17,7 @@ shoots.forEach(s => {
   if (s.date && !/^\d{4}-\d{2}$/.test(s.date)) errs.push(`${s.id}: date must be YYYY-MM`);
   (s.sources || []).forEach(src => { if (!STEP.includes(src.ingest)) errs.push(`${s.id}/${src.camera}: bad ingest ${src.ingest}`); });
   ["markers", "stringouts", "sync", "story_cut"].forEach(k => { if (!STEP.includes((s.stages || {})[k])) errs.push(`${s.id}: bad ${k}`); });
+  if (s.stages && s.stages.icloud_export !== undefined && !STEP.includes(s.stages.icloud_export)) errs.push(`${s.id}: bad icloud_export`);
 });
 pieces.forEach(p => {
   if (pid.has(p.id)) errs.push(`duplicate piece id ${p.id}`); pid.add(p.id);

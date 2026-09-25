@@ -8,12 +8,12 @@
     "sources": [
       {
         "camera": "iPhone",
-        "detail": "Ingested",
+        "detail": "Exported from iCloud and ingested",
         "ingest": "done"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
+        "detail": "Exported from iCloud and ingested",
         "ingest": "done"
       },
       {
@@ -26,7 +26,8 @@
       "markers": "not_started",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "Opens on iPhone and Ray-Ban. The Vixia is bought during this shoot, on camera, and used from here on."
@@ -67,20 +68,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "done",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "done"
+      "story_cut": "done",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "24 Hours of Daytona."
@@ -99,20 +101,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "not_started",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
@@ -131,20 +134,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "not_started",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story."
@@ -163,20 +167,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "not_started",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "AMG 4-door electric coupe launch."
@@ -195,20 +200,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "done",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "done"
+      "story_cut": "done",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
@@ -227,20 +233,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "not_started",
       "stringouts": "done",
       "sync": "issue",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
@@ -259,20 +266,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "in_progress",
       "stringouts": "done",
       "sync": "done",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni. Sync issue solved from here on.",
     "notes": ""
@@ -291,20 +299,21 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Ingested",
-        "ingest": "done"
+        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
       "markers": "not_started",
       "stringouts": "not_started",
       "sync": "not_started",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "icloud_export": "not_started"
     },
     "sync_note": "",
     "notes": "James's 42nd birthday, Jul 26, 2026. Additional footage, not billed."

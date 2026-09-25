@@ -9,6 +9,7 @@
     issue:       {label: "Issue",       cls: "st-issue"}
   };
   var SHOOT_STEPS = [
+    {key: "icloud_export", label: "iCloud export", cloudOnly: true},
     {key: "ingest",     label: "Ingest"},
     {key: "markers",    label: "Markers"},
     {key: "stringouts", label: "Stringouts"},
@@ -64,6 +65,7 @@
     return srcs.some(function(s){ return s.ingest === "done" || s.ingest === "in_progress"; }) ? "in_progress" : "not_started";
   }
   function stepState(shoot, key){ return key === "ingest" ? ingestState(shoot) : ((shoot.stages || {})[key] || "not_started"); }
+  function hasCloudSource(shoot){ return (shoot.sources || []).some(function(s){ return s.camera === "iPhone" || s.camera === "Ray-Ban"; }); }
 
   // ---------- state ----------
   var shoots = [], pieces = [], byShoot = {}, byPiece = {};
@@ -226,7 +228,9 @@
         var st = STEP_STATES[src.ingest] || STEP_STATES.not_started;
         return '<span class="tag ' + st.cls + '" title="' + esc(src.detail || "") + '">' + esc(src.camera) + ' · ' + esc(st.label.toLowerCase()) + '</span>';
       }).join("") || '<span class="tag st-none">No sources logged</span>';
-      var steps = SHOOT_STEPS.map(function(step){
+      var steps = SHOOT_STEPS.filter(function(step){
+        return !step.cloudOnly || hasCloudSource(s);
+      }).map(function(step){
         var st = STEP_STATES[stepState(s, step.key)] || STEP_STATES.not_started;
         var tip = step.key === "sync" && s.sync_note ? s.sync_note : st.label;
         return '<li class="' + st.cls + '" title="' + esc(tip) + '"><span>' + esc(step.label) + '</span><em>' + esc(st.label) + '</em></li>';
