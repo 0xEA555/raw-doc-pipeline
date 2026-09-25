@@ -17,8 +17,8 @@
   ];
   var KINDS = { production: "Production", supporting: "Supporting", unsorted: "To sort", planned: "Planned" };
   var TYPES = [
-    {key: "spine",   label: "Spine",                spec: "FX3 · Carlos · James", color: "var(--ty-spine)", desc: "Narrative spine interview, shot separately at RS — its own mini production that a YouTube cut is built around."},
     {key: "youtube", label: "YouTube cut",          spec: "12–20 min",    color: "var(--ty-youtube)", desc: "The priority. Depends on its narrative spine, shot on the FX3 at RS with James."},
+    {key: "spine",   label: "Spine",                spec: "FX3 · Carlos · James", color: "var(--ty-spine)", desc: "Narrative spine interview, shot separately at RS — its own mini production that a YouTube cut is built around."},
     {key: "raw",     label: "RAW cut",              spec: "Multi-hour",   color: "var(--ty-raw)",     desc: "Nearly uncut, premiered or livestreamed. Audio pass and sensitive content removed; everything else plays out."},
     {key: "cutdown", label: "Topical cutdown",      spec: "Mini episode", color: "var(--ty-cutdown)", desc: "A mini episode built around one experience."},
     {key: "clip",    label: "Clip",                 spec: "10–90 sec",    color: "var(--ty-clip)",    desc: "BTS moments for social."},
