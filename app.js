@@ -166,13 +166,14 @@
     var facts = fact("Footage", fo.text, fo.cls);
     if (p.spine != null) facts += fact("Spine", (SPINE[p.spine]||SPINE.not_started).label, spineCls(p));
     facts += fact("Stage", chainLabel(p.stage), stageCls(p.stage), chainBar(p));
+    if (p.frameio_url) facts += fact("Frame.io", p.frameio_label || "Linked", "st-done");
     return '<button class="card piece-card" data-piece="' + esc(p.id) + '" style="--c:' + ti.color + '">' +
       '<div class="card-head"><span class="type-tag">' + esc(ti.label) + '</span><span class="spec">' + esc(ti.spec) + '</span></div>' +
       '<div class="card-title">' + esc(p.title) + '</div>' +
       (src ? '<div class="card-meta">' + esc(src) + '</div>' : '') +
       '<dl class="facts">' + facts + '</dl>' +
       (p.notes ? '<div class="card-notes">' + esc(p.notes) + '</div>' : '') +
-      (p.frameio_url ? '<div class="card-link">Frame.io ↗</div>' : '') +
+
     '</button>';
   }
   function group(title, items, meta, desc){
@@ -292,7 +293,7 @@
       (extra.length ? field("Also draws from", esc(extra.join(", "))) : '') +
       (kids.length ? field("Cut from this", esc(kids.map(function(k){ return k.title; }).join(", "))) : '') +
       (p.notes ? field("Notes", esc(p.notes)) : '') +
-      (p.frameio_url ? field("Frame.io", '<iframe class="frame-embed" src="' + esc(p.frameio_url) + '" allow="fullscreen"></iframe><a class="dialog-link" href="' + esc(p.frameio_url) + '" target="_blank" rel="noopener">Open in Frame.io →</a>') : '') +
+      (p.frameio_url ? field("Frame.io", (p.frameio_label ? esc(p.frameio_label) + '<br>' : '') + '<a class="dialog-link" href="' + esc(p.frameio_url) + '" target="_blank" rel="noopener">Open in Frame.io →</a>') : '') +
       (p.youtube_url ? field("Published", '<a class="dialog-link" href="' + esc(p.youtube_url) + '" target="_blank" rel="noopener">Watch on YouTube →</a>') : '');
     var dlg = document.getElementById("card-dialog");
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
