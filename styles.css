@@ -17,6 +17,7 @@
   --ty-clip: #2E5A8A;
   --ty-sizzle: #2E6B3E;
   --ty-feature: #6A3E8A;
+  --ty-raw: #2D6E73;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -26,9 +27,11 @@
     --prog-fg: #E8B870; --prog-bg: #3A2C15;
     --none-fg: #9A917F; --none-bg: #2E2A22;
     --issue-fg: #F0A090; --issue-bg: #3D1F19;
+    --ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD;
   }
 }
 :root[data-theme="dark"]{
+--ty-youtube: #E0835F; --ty-cutdown: #D9A54E; --ty-clip: #7FA8D9; --ty-sizzle: #7CC08E; --ty-feature: #B391D6; --ty-raw: #6FB8BD;
   --bg: #1C1915; --bg-card: #262219; --bg-sunk: #211E17;
   --ink: #F1ECE1; --ink-soft: #B3AA98; --line: #3A342A;
   --done-fg: #8FD1A0; --done-bg: #1F3526;
@@ -123,3 +126,33 @@ dialog#card-dialog::backdrop{ background:rgba(20,16,10,.45); }
 .dialog-link{ color:var(--accent); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px; }
 .dialog-link:hover{ text-decoration:underline; }
 .frame-embed{ width:100%; aspect-ratio:16/9; border:1px solid var(--line); border-radius:10px; background:#000; }
+
+/* ---- EA Productions mark ---- */
+.eyebrow-row{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:10px; }
+.eyebrow-row .eyebrow{ margin:0; }
+.maker{ display:flex; align-items:center; gap:7px; font:500 11px "IBM Plex Mono",monospace; letter-spacing:.06em; color:var(--ink-soft); opacity:.8; }
+.maker img{ border-radius:5px; display:block; }
+.page-footer{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px; }
+.footer-maker{ display:flex; align-items:center; gap:12px; max-width:560px; }
+.footer-maker img{ border-radius:8px; flex:0 0 auto; display:block; }
+.footer-maker b{ display:block; color:var(--ink); font-weight:600; font-size:13px; }
+.footer-maker span{ display:block; line-height:1.4; }
+.footer-note{ font-size:12px; }
+
+/* ---- piece cards ---- */
+.piece-card{ gap:8px; border-top:3px solid var(--c); }
+.card-head{ display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.type-tag{ font:700 10.5px "Archivo",sans-serif; text-transform:uppercase; letter-spacing:.07em; color:var(--c); }
+.spec{ font:500 11px "IBM Plex Mono",monospace; color:var(--ink-soft); }
+.piece-card .card-title{ font-size:15.5px; }
+.facts{ margin:4px 0 0; padding:8px 0 0; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:5px; }
+.fact{ display:grid; grid-template-columns:62px 1fr; align-items:center; gap:8px; font-size:12.5px; }
+.fact dt{ font:500 10.5px "IBM Plex Mono",monospace; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); }
+.fact dd{ margin:0; display:flex; align-items:center; gap:7px; font-weight:600; }
+.fact .dot{ width:8px; height:8px; border-radius:50%; flex:0 0 auto; background:currentColor; }
+.fact .dot.st-done{ color:var(--done-fg); } .fact .dot.st-prog{ color:var(--prog-fg); }
+.fact .dot.st-none{ color:var(--none-fg); } .fact .dot.st-issue{ color:var(--issue-fg); }
+.fact .dot{ background:currentColor !important; }
+.fact .chain{ margin-left:auto; width:72px; }
+.card-link{ font-size:12px; font-weight:600; color:var(--accent); }
+.dialog-desc{ font-size:13px; color:var(--ink-soft); margin:8px 0 0; line-height:1.45; }
