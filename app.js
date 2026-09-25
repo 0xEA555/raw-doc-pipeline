@@ -248,7 +248,7 @@
     document.getElementById("legend-shoots").hidden = piecesTab;
     document.getElementById("filters").innerHTML = TYPES.map(function(t){
       var on = !!ui.typeFilters[t.key];
-      return '<button class="chip' + (on ? ' is-active' : '') + '" data-type="' + t.key + '" style="color:' + t.color + '">' + esc(t.label) + '</button>';
+      return '<button class="chip' + (on ? ' is-active' : '') + '" data-type="' + t.key + '" aria-pressed="' + on + '" style="--c:' + t.color + '">' + (on ? '<span class="chip-check">✓</span>' : '') + esc(t.label) + '</button>';
     }).join("");
     setActive("#tabs .tab", "data-tab", ui.tab);
     setActive("#group-seg .seg-btn", "data-group", ui.group);

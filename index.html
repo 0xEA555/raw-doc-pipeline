@@ -22,8 +22,8 @@
   </header>
 
   <nav class="tabs" id="tabs" role="tablist" aria-label="Board">
-    <button class="tab is-active" data-tab="pieces" role="tab" aria-selected="true">Pieces</button>
     <button class="tab" data-tab="shoots" role="tab" aria-selected="false">Shoots</button>
+    <button class="tab is-active" data-tab="pieces" role="tab" aria-selected="true">Pieces</button>
   </nav>
 
   <div class="controls" id="piece-controls">
@@ -31,13 +31,14 @@
       <button class="seg-btn" data-group="shoot" role="tab" aria-selected="false">By shoot</button>
       <button class="seg-btn is-active" data-group="type" role="tab" aria-selected="true">By type</button>
     </div>
-    <div class="filters" id="filters"></div>
+    <div class="filter-row"><span class="filter-label">Filter</span><div class="filters" id="filters"></div></div>
   </div>
 
   <div class="legend" id="legend-pieces">
     <span class="legend-chain">Every piece: EA rough → RS treatment → RS approval → Published. YouTube cuts also need a spine (Carlos · FX3 · James).</span>
   </div>
   <div class="legend" id="legend-shoots" hidden>
+    <span class="legend-key">Key</span>
     <span><i class="dot st-done"></i>Done</span>
     <span><i class="dot st-prog"></i>In progress</span>
     <span><i class="dot st-none"></i>Not started</span>
