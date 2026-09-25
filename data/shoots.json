@@ -7,6 +7,16 @@
     "location": "Los Angeles",
     "sources": [
       {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
         "camera": "Vixia",
         "detail": "100_0818, 101-819, 102-820, 103_0820, 104_821, 112_821",
         "ingest": "done"
@@ -18,8 +28,8 @@
       "sync": "issue",
       "story_cut": "not_started"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
-    "notes": ""
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
+    "notes": "Opens on iPhone and Ray-Ban. The Vixia is bought during this shoot, on camera, and used from here on."
   },
   {
     "id": "nightschool",
@@ -54,6 +64,16 @@
         "camera": "Vixia",
         "detail": "116_0121, 117_0122, 118_0123, 119_0123, 120_0124, 121_0125",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -62,7 +82,7 @@
       "sync": "issue",
       "story_cut": "done"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "24 Hours of Daytona."
   },
   {
@@ -76,6 +96,16 @@
         "camera": "Vixia",
         "detail": "122_0303, 123_0304, 124_0305, 125_0306, 126_0306, 127_0306, 128_0306, 129_0306, 130_0307, 131_0309",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -84,7 +114,7 @@
       "sync": "issue",
       "story_cut": "not_started"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
   },
   {
@@ -98,6 +128,16 @@
         "camera": "Vixia",
         "detail": "132_0409, 133_0410",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -106,7 +146,7 @@
       "sync": "issue",
       "story_cut": "not_started"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story."
   },
   {
@@ -120,6 +160,16 @@
         "camera": "Vixia",
         "detail": "134_0519, 135_0519, 136_0520, 137_0520",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -128,7 +178,7 @@
       "sync": "issue",
       "story_cut": "not_started"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "AMG 4-door electric coupe launch."
   },
   {
@@ -142,6 +192,16 @@
         "camera": "Vixia",
         "detail": "138_0612, 139_0613, 140_0613, 141_0614, 142_0615, 143_0616",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -150,7 +210,7 @@
       "sync": "issue",
       "story_cut": "done"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
   },
   {
@@ -164,6 +224,16 @@
         "camera": "Vixia",
         "detail": "Bin numbers to add",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -172,7 +242,7 @@
       "sync": "issue",
       "story_cut": "not_started"
     },
-    "sync_note": "Lav has no hard sync to camera mic",
+    "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": ""
   },
   {
@@ -186,6 +256,16 @@
         "camera": "Vixia",
         "detail": "Bin numbers to add",
         "ingest": "done"
+      },
+      {
+        "camera": "iPhone",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
+      },
+      {
+        "camera": "Ray-Ban",
+        "detail": "Exporting now",
+        "ingest": "in_progress"
       }
     ],
     "stages": {
@@ -194,7 +274,7 @@
       "sync": "done",
       "story_cut": "not_started"
     },
-    "sync_note": "Sync issue solved from this shoot forward",
+    "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni. Sync issue solved from here on.",
     "notes": ""
   },
   {
@@ -228,33 +308,6 @@
     },
     "sync_note": "",
     "notes": "James's 42nd birthday, Jul 26, 2026. Additional footage, not billed."
-  },
-  {
-    "id": "phone",
-    "name": "iPhone / Ray-Ban Exports",
-    "date": "2026-09",
-    "kind": "unsorted",
-    "location": "",
-    "sources": [
-      {
-        "camera": "iPhone",
-        "detail": "Exporting now",
-        "ingest": "in_progress"
-      },
-      {
-        "camera": "Ray-Ban",
-        "detail": "Exporting now",
-        "ingest": "in_progress"
-      }
-    ],
-    "stages": {
-      "markers": "not_started",
-      "stringouts": "not_started",
-      "sync": "not_started",
-      "story_cut": "not_started"
-    },
-    "sync_note": "",
-    "notes": "Clips move to their shoots once sorted."
   },
   {
     "id": "la4",

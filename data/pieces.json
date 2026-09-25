@@ -1,5 +1,5 @@
 [
-  {"id": "ep-la1", "title": "LA - 1", "type": "youtube", "shoot": "la1", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-la1", "title": "LA - 1", "type": "youtube", "shoot": "la1", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "Opens on phone and Ray-Bans; the camera is bought on camera.", "frameio_url": "", "youtube_url": ""},
   {"id": "ep-daytona", "title": "Daytona", "type": "youtube", "shoot": "daytona", "also_from": [], "parent": null, "spine": "shot", "stage": "not_started", "notes": "Story cuts done for both halves.", "frameio_url": "", "youtube_url": ""},
   {"id": "ep-ger1", "title": "Germany 1 - AMG 1", "type": "youtube", "shoot": "ger1", "also_from": [], "parent": null, "spine": "shot", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
   {"id": "ep-la2", "title": "LA - 2", "type": "youtube", "shoot": "la2", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
