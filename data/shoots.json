@@ -1,0 +1,93 @@
+[
+  {
+    "id": "la1", "name": "LA - 1", "date": "2025-08", "kind": "production", "location": "Los Angeles",
+    "sources": [{"camera": "Vixia", "detail": "100_0818, 101-819, 102-820, 103_0820, 104_821, 112_821", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": ""
+  },
+  {
+    "id": "nightschool", "name": "James - Night School", "date": "2025-10", "kind": "supporting", "location": "",
+    "sources": [{"camera": "Vixia", "detail": "115_1027", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": "Supporting footage."
+  },
+  {
+    "id": "daytona", "name": "Daytona", "date": "2026-01", "kind": "production", "location": "Daytona, FL",
+    "sources": [{"camera": "Vixia", "detail": "116_0121, 117_0122, 118_0123, 119_0123, 120_0124, 121_0125", "ingest": "done"}],
+    "stages": {"markers": "done", "stringouts": "done", "sync": "issue", "story_cut": "done"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": "24 Hours of Daytona."
+  },
+  {
+    "id": "ger1", "name": "Germany 1 - AMG 1", "date": "2026-03", "kind": "production", "location": "Nürburgring, Germany",
+    "sources": [{"camera": "Vixia", "detail": "122_0303, 123_0304, 124_0305, 125_0306, 126_0306, 127_0306, 128_0306, 129_0306, 130_0307, 131_0309", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": ""
+  },
+  {
+    "id": "la2", "name": "LA - 2", "date": "2026-04", "kind": "production", "location": "Los Angeles",
+    "sources": [{"camera": "Vixia", "detail": "132_0409, 133_0410", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story."
+  },
+  {
+    "id": "la3", "name": "LA - 3", "date": "2026-05", "kind": "production", "location": "Los Angeles",
+    "sources": [{"camera": "Vixia", "detail": "134_0519, 135_0519, 136_0520, 137_0520", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": "AMG 4-door electric coupe launch."
+  },
+  {
+    "id": "lemans", "name": "Le Mans + AMG 2", "date": "2026-06", "kind": "production", "location": "Le Mans, France; AMG HQ",
+    "sources": [{"camera": "Vixia", "detail": "138_0612, 139_0613, 140_0613, 141_0614, 142_0615, 143_0616", "ingest": "done"}],
+    "stages": {"markers": "done", "stringouts": "done", "sync": "issue", "story_cut": "done"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": ""
+  },
+  {
+    "id": "monterey", "name": "Monterey Car Week", "date": "2026-08", "kind": "production", "location": "Monterey, CA",
+    "sources": [{"camera": "Vixia", "detail": "Bin numbers to add", "ingest": "done"}],
+    "stages": {"markers": "not_started", "stringouts": "done", "sync": "issue", "story_cut": "not_started"},
+    "sync_note": "Lav has no hard sync to camera mic",
+    "notes": ""
+  },
+  {
+    "id": "tutto", "name": "Tutto Bene 2026", "date": "2026-09", "kind": "production", "location": "Italy",
+    "sources": [{"camera": "Vixia", "detail": "Bin numbers to add", "ingest": "done"}],
+    "stages": {"markers": "in_progress", "stringouts": "done", "sync": "done", "story_cut": "not_started"},
+    "sync_note": "Sync issue solved from this shoot forward",
+    "notes": ""
+  },
+  {
+    "id": "birthday", "name": "James 42nd Birthday", "date": null, "kind": "supporting", "location": "",
+    "sources": [],
+    "stages": {"markers": "not_started", "stringouts": "not_started", "sync": "not_started", "story_cut": "not_started"},
+    "sync_note": "",
+    "notes": "Additional footage. Date and sources to add."
+  },
+  {
+    "id": "phone", "name": "iPhone / Ray-Ban Exports", "date": "2026-09", "kind": "unsorted", "location": "",
+    "sources": [{"camera": "iPhone", "detail": "Exporting now", "ingest": "in_progress"}, {"camera": "Ray-Ban", "detail": "Exporting now", "ingest": "in_progress"}],
+    "stages": {"markers": "not_started", "stringouts": "not_started", "sync": "not_started", "story_cut": "not_started"},
+    "sync_note": "",
+    "notes": "Clips move to their shoots once sorted."
+  },
+  {
+    "id": "la4", "name": "LA - 4", "date": null, "kind": "planned", "location": "Los Angeles",
+    "sources": [],
+    "stages": {"markers": "not_started", "stringouts": "not_started", "sync": "not_started", "story_cut": "not_started"},
+    "sync_note": "",
+    "notes": "Final LA trip. Carries the narrative backbone interviews."
+  },
+  {
+    "id": "amg3", "name": "AMG 3", "date": null, "kind": "planned", "location": "",
+    "sources": [],
+    "stages": {"markers": "not_started", "stringouts": "not_started", "sync": "not_started", "story_cut": "not_started"},
+    "sync_note": "",
+    "notes": "Likely third AMG trip."
+  }
+]

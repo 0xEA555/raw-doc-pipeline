@@ -1,32 +1,16 @@
 [
-  {"id":"la1-p1","title":"LA-1 — Episode","type":"youtube","shoot":"LA - 1","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Aug 2025.","frameio_url":"","youtube_url":""},
-
-  {"id":"day-p1","title":"Daytona — Part 1","type":"youtube","shoot":"Daytona","part":1,"parts":2,"status":"in_progress","notes":"Story cut done (RS-10). Jan 2026.","frameio_url":"","youtube_url":""},
-  {"id":"day-p2","title":"Daytona — Part 2","type":"youtube","shoot":"Daytona","part":2,"parts":2,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
-
-  {"id":"ger1-p1","title":"Germany 1 / AMG 1 — Part 1","type":"youtube","shoot":"Germany 1 - AMG 1","part":1,"parts":2,"status":"not_started","notes":"Ingested, day stringouts done. Nürburgring, Mar 2026. Story spine set in LA-2 session.","frameio_url":"","youtube_url":""},
-  {"id":"ger1-p2","title":"Germany 1 / AMG 1 — Part 2","type":"youtube","shoot":"Germany 1 - AMG 1","part":2,"parts":2,"status":"not_started","notes":"Ingested, day stringouts done.","frameio_url":"","youtube_url":""},
-
-  {"id":"la2-p1","title":"LA-2 — Episode","type":"youtube","shoot":"LA - 2","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Apr 2026: podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting.","frameio_url":"","youtube_url":""},
-
-  {"id":"la3-p1","title":"LA-3 — Episode","type":"youtube","shoot":"LA - 3","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. May 2026: AMG 4-door electric coupe launch.","frameio_url":"","youtube_url":""},
-
-  {"id":"lm-p1","title":"Le Mans — Part 1","type":"youtube","shoot":"Le Mans + AMG 2","part":1,"parts":3,"status":"in_progress","notes":"Story cut done (RS-9), handoff doc to Carlos. Jun 2026.","frameio_url":"","youtube_url":""},
-  {"id":"lm-p2","title":"Le Mans — Part 2","type":"youtube","shoot":"Le Mans + AMG 2","part":2,"parts":3,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
-  {"id":"lm-p3","title":"AMG Visit 2","type":"youtube","shoot":"Le Mans + AMG 2","part":3,"parts":3,"status":"in_progress","notes":"Story cut done (RS-10).","frameio_url":"","youtube_url":""},
-
-  {"id":"mty-p1","title":"Monterey Car Week — Episode","type":"youtube","shoot":"Monterey Car Week","part":1,"parts":1,"status":"not_started","notes":"Ingested, day stringouts done. Aug 2026.","frameio_url":"","youtube_url":""},
-
-  {"id":"tb-p1","title":"Tutto Bene — Episode 1","type":"youtube","shoot":"Tutto Bene 2026","part":1,"parts":2,"status":"in_progress","notes":"Priority deliverable. Markers in process. First shoot with audio sync solved.","frameio_url":"","youtube_url":""},
-  {"id":"tb-p2","title":"Tutto Bene — Episode 2","type":"youtube","shoot":"Tutto Bene 2026","part":2,"parts":2,"status":"not_started","notes":"","frameio_url":"","youtube_url":""},
-
-  {"id":"cd-nico","title":"Nico — Art Cars","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown from EA's editing-time plan. Source shoot to confirm.","frameio_url":"","youtube_url":""},
-  {"id":"cd-carmag","title":"James — Car Mag Interview","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
-  {"id":"cd-carlos","title":"Carlos, Belgian Ninjas & Oz — BTS","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
-  {"id":"cd-tour","title":"Touring the AMG — James & Gordian","type":"cutdown","shoot":"","status":"not_started","notes":"Topical cutdown. Source shoot to confirm.","frameio_url":"","youtube_url":""},
-  {"id":"cd-sizzle","title":"Sizzle Reel","type":"cutdown","shoot":"All shoots","status":"not_started","notes":"After Tutto ep 1 and full marking pass.","frameio_url":"","youtube_url":""},
-
-  {"id":"raw-iphone","title":"iPhone / Ray-Ban Footage — Ingest","type":"raw","shoot":"","status":"in_progress","notes":"Exporting now. Assign to shoot once sorted.","frameio_url":"","youtube_url":""},
-
-  {"id":"feature","title":"Before The Shift — Feature Doc","type":"feature","shoot":"All shoots","status":"not_started","notes":"Long-arc cut across the full series.","frameio_url":"","youtube_url":""}
+  {"id": "ep-la1", "title": "LA - 1", "type": "youtube", "shoot": "la1", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-daytona", "title": "Daytona", "type": "youtube", "shoot": "daytona", "also_from": [], "parent": null, "spine": "shot", "stage": "not_started", "notes": "Story cuts done for both halves.", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-ger1", "title": "Germany 1 - AMG 1", "type": "youtube", "shoot": "ger1", "also_from": [], "parent": null, "spine": "shot", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-la2", "title": "LA - 2", "type": "youtube", "shoot": "la2", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-la3", "title": "LA - 3", "type": "youtube", "shoot": "la3", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-lemans", "title": "Le Mans + AMG 2", "type": "youtube", "shoot": "lemans", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "Story cuts done: Le Mans Pt 1, Le Mans Pt 2, AMG Visit 2. Handoff doc to Carlos for Pt 1.", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-monterey", "title": "Monterey Car Week", "type": "youtube", "shoot": "monterey", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "", "frameio_url": "", "youtube_url": ""},
+  {"id": "ep-tutto", "title": "Tutto Bene 2026", "type": "youtube", "shoot": "tutto", "also_from": [], "parent": null, "spine": "not_started", "stage": "not_started", "notes": "Priority: first deliverable. Waiting on markers.", "frameio_url": "", "youtube_url": ""},
+  {"id": "cd-nico", "title": "Nico — Art Cars", "type": "cutdown", "shoot": null, "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "Source shoot to confirm.", "frameio_url": "", "youtube_url": ""},
+  {"id": "cd-carmag", "title": "James — Car Mag Interview", "type": "cutdown", "shoot": null, "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "Source shoot to confirm.", "frameio_url": "", "youtube_url": ""},
+  {"id": "cd-carlos", "title": "Carlos, Belgian Ninjas & Oz — BTS", "type": "cutdown", "shoot": null, "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "Source shoot to confirm.", "frameio_url": "", "youtube_url": ""},
+  {"id": "cd-tour", "title": "Touring the AMG — James & Gordian", "type": "cutdown", "shoot": null, "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "Source shoot to confirm.", "frameio_url": "", "youtube_url": ""},
+  {"id": "sizzle", "title": "Sizzle Reel", "type": "sizzle", "shoot": "all", "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "After Tutto Bene and the full marking pass.", "frameio_url": "", "youtube_url": ""},
+  {"id": "feature", "title": "Before The Shift — Feature", "type": "feature", "shoot": "all", "also_from": [], "parent": null, "spine": null, "stage": "not_started", "notes": "Long-arc cut across the full series.", "frameio_url": "", "youtube_url": ""}
 ]
