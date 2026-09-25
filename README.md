@@ -1,21 +1,21 @@
 # RAW Doc Pipeline
 
-Public-visibility tracking site for BTS: RAW Doc content — every derived piece
-(YouTube episode, raw selects, cutdown, social clip, feature) mapped to its
-parent shoot, with status.
+Team-facing view of Before The Shift / RAW Doc post-production: every shoot, every piece cut from it, and where each one stands. It tracks the work only. Money (invoices, expenses, day bank) stays in the RS_RawDocumentary_EA_Project_Tracker sheet.
 
-## Structure
-- `index.html` / `styles.css` / `app.js` — static site, no build step
-- `data/pieces.json` — source of truth for pieces. Edit this file and push to update the board.
+## Data
+- `data/shoots.json`: the parent layer. One entry per shoot (production, supporting, to-sort, planned).
+  - Each shoot has sources (Vixia, iPhone, Ray-Ban…), each with its own ingest state.
+  - Stages: markers → stringouts → sync → story cut.
+  - States: `done`, `in_progress`, `not_started`, `issue`.
+- `data/pieces.json`: the children. Types: `youtube`, `cutdown`, `clip`, `sizzle`, `feature`.
+  - `shoot` is the source shoot id, `"all"`, or `null` if not yet confirmed.
+  - `also_from` lists extra shoots for cross-referenced cuts.
+  - `parent` is the piece this was cut from (a cutdown from an episode, a clip from a cutdown).
+  - `spine` (Carlos · FX3 · James) is required for YouTube episodes: `not_started` → `scheduled` → `shot` → `delivered`. It's `null` where optional.
+  - `stage` is the chain: `not_started` → `rough` (EA) → `rs_treatment` (Carlos) → `rs_approval` → `published`.
+  - `frameio_url` is where the export, notes and approval live. `youtube_url` is set once published.
 
-## Local preview
-Open `index.html` directly, or serve the folder (`npx serve .`) so `fetch()` works from `file://`-restricted browsers.
+Run `node tools/validate.js` after any data change. It catches broken references and bad states.
 
 ## Deploy
-Connected to Netlify via Git — push to `main` and it redeploys automatically once the Netlify site is linked (Netlify dashboard → Add new site → Import an existing project → pick this repo).
-
-## Roadmap
-- **Frame.io** — set a piece's `frameio_url` in `data/pieces.json` to a share link and it renders inline in the card detail view.
-- **YouTube data** — pull view counts / publish status via a Netlify Function calling the YouTube Data API v3, merged into `pieces.json` at build/refresh time.
-- **Live sheet sync** — replace the static `pieces.json` with a Netlify Function pulling from the RS_RawDocumentary_EA_Project_Tracker Google Sheet, so this stays a read-through of the one tracker rather than a second source of truth.
-- **Write-back** — team edits (status changes) currently go through the JSON file + git push. A lightweight authenticated edit flow (Netlify Function + GitHub API commit) is a natural next step if that becomes friction.
+Static site, no build step. Netlify deploys `main` on every push.
