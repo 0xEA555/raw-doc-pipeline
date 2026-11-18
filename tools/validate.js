@@ -29,7 +29,7 @@ pieces.forEach(p => {
     if (!p.for_episode || !pid.has(p.for_episode)) errs.push(`${p.id}: unknown for_episode ${p.for_episode}`);
   } else {
     if (!STAGE.includes(p.stage)) errs.push(`${p.id}: bad stage ${p.stage}`);
-    if (p.type === "youtube" && (!p.spine_id || !pid.has(p.spine_id))) errs.push(`${p.id}: YouTube episodes need a valid spine_id`);
+    if (p.type === "youtube" && (p.spine_id !== null && (!p.spine_id || !pid.has(p.spine_id)))) errs.push(`${p.id}: YouTube episodes need a valid spine_id`);
   }
   if (p.shoot && p.shoot !== "all" && !sid.has(p.shoot)) errs.push(`${p.id}: unknown shoot ${p.shoot}`);
   (p.also_from || []).forEach(k => { if (!sid.has(k)) errs.push(`${p.id}: unknown also_from ${k}`); });

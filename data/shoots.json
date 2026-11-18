@@ -1,7 +1,7 @@
 [
   {
     "id": "la1",
-    "name": "LA - 1",
+    "name": "LA-1",
     "date": "2025-08",
     "kind": "production",
     "location": "Los Angeles",
@@ -23,14 +23,25 @@
       }
     ],
     "stages": {
-      "markers": "not_started",
+      "markers": "done",
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
       "icloud_export": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": "Opens on iPhone and Ray-Ban. The Vixia is bought during this shoot, on camera, and used from here on."
+    "notes": "Opens on iPhone and Ray-Ban. The Vixia is bought during this shoot, on camera, and used from here on.",
+    "number": 1,
+    "footage": {
+      "bins": 6,
+      "clips": 61,
+      "hours": 12.3,
+      "day_stringouts": 4,
+      "markers": 70,
+      "transcribed_pct": 97
+    },
+    "flag": "Bin 112_0821 media not on hand, unchecked.",
+    "flag_level": "todo"
   },
   {
     "id": "nightschool",
@@ -68,12 +79,12 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
@@ -85,14 +96,25 @@
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": "24 Hours of Daytona."
+    "notes": "24 Hours of Daytona.",
+    "number": 3,
+    "footage": {
+      "bins": 6,
+      "clips": 274,
+      "hours": 10.0,
+      "day_stringouts": 4,
+      "markers": 168,
+      "transcribed_pct": 100
+    },
+    "flag": "Bin 117_0122 is a one-clip stub.",
+    "flag_level": "info"
   },
   {
     "id": "ger1",
-    "name": "Germany 1 - AMG 1",
+    "name": "AMG 1",
     "date": "2026-03",
     "kind": "production",
-    "location": "N\u00fcrburgring, Germany",
+    "location": "Nürburgring, Germany",
     "sources": [
       {
         "camera": "Vixia",
@@ -101,28 +123,39 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
     "stages": {
-      "markers": "not_started",
+      "markers": "done",
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": ""
+    "notes": "",
+    "number": 4,
+    "footage": {
+      "bins": 10,
+      "clips": 300,
+      "hours": 15.6,
+      "day_stringouts": 5,
+      "markers": 225,
+      "transcribed_pct": 98
+    },
+    "flag": "One clip (MVI_0379) is not on a stringout.",
+    "flag_level": "todo"
   },
   {
     "id": "la2",
-    "name": "LA - 2",
+    "name": "LA 2",
     "date": "2026-04",
     "kind": "production",
     "location": "Los Angeles",
@@ -134,28 +167,38 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
     "stages": {
-      "markers": "not_started",
+      "markers": "done",
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story."
+    "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story.",
+    "number": 5,
+    "footage": {
+      "bins": 2,
+      "clips": 103,
+      "hours": 6.1,
+      "day_stringouts": 2,
+      "markers": 63,
+      "transcribed_pct": 98
+    },
+    "flag": ""
   },
   {
     "id": "la3",
-    "name": "LA - 3",
+    "name": "LA 3",
     "date": "2026-05",
     "kind": "production",
     "location": "Los Angeles",
@@ -167,28 +210,38 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
     "stages": {
-      "markers": "not_started",
+      "markers": "done",
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": "AMG 4-door electric coupe launch."
+    "notes": "AMG 4-door electric coupe launch.",
+    "number": 6,
+    "footage": {
+      "bins": 4,
+      "clips": 172,
+      "hours": 5.4,
+      "day_stringouts": 2,
+      "markers": 67,
+      "transcribed_pct": 99
+    },
+    "flag": ""
   },
   {
     "id": "lemans",
-    "name": "Le Mans + AMG 2",
+    "name": "Le Mans 1 + AMG 2",
     "date": "2026-06",
     "kind": "production",
     "location": "Le Mans, France; AMG HQ",
@@ -200,12 +253,12 @@
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
@@ -217,94 +270,191 @@
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": ""
+    "notes": "",
+    "number": 7,
+    "footage": {
+      "bins": 9,
+      "clips": 320,
+      "hours": 12.9,
+      "day_stringouts": 4,
+      "markers": 118,
+      "transcribed_pct": 99
+    },
+    "flag": "Premiere export error: the stringout export for this production predates bins 139, 140 and 146 (167 clips, including the race itself). The day pages and counts leave those bins out until it is re-exported.",
+    "flag_level": "issue"
   },
   {
     "id": "monterey",
-    "name": "Monterey Car Week",
+    "name": "Monterey",
     "date": "2026-08",
     "kind": "production",
     "location": "Monterey, CA",
     "sources": [
       {
         "camera": "Vixia",
-        "detail": "Bin numbers to add",
+        "detail": "Bins 154 to 155",
         "ingest": "done"
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
     "stages": {
-      "markers": "not_started",
+      "markers": "done",
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
       "icloud_export": "not_started"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
-    "notes": ""
+    "notes": "",
+    "number": 8,
+    "footage": {
+      "bins": 2,
+      "clips": 212,
+      "hours": 5.3,
+      "day_stringouts": 2,
+      "markers": 51,
+      "transcribed_pct": 100
+    },
+    "flag": ""
   },
   {
     "id": "tutto",
-    "name": "Tutto Bene 2026",
+    "name": "Tutto Bene",
     "date": "2026-09",
     "kind": "production",
     "location": "Italy",
     "sources": [
       {
         "camera": "Vixia",
-        "detail": "Bin numbers to add",
+        "detail": "Bins 156 to 165",
         "ingest": "done"
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
     "stages": {
-      "markers": "in_progress",
+      "markers": "issue",
       "stringouts": "done",
       "sync": "done",
-      "story_cut": "not_started",
+      "story_cut": "in_progress",
       "icloud_export": "not_started"
     },
     "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni. Sync issue solved from here on.",
-    "notes": ""
+    "notes": "",
+    "number": 9,
+    "footage": {
+      "bins": 10,
+      "clips": 437,
+      "hours": 18.7,
+      "day_stringouts": 5,
+      "markers": 318,
+      "transcribed_pct": 98
+    },
+    "flag": "Premiere export error: markers on Days 1 to 3 (bins 157 to 160) exist in Premiere but will not export. EA is resolving. Marker count is partial for those bins.",
+    "flag_level": "issue"
+  },
+  {
+    "id": "petit",
+    "name": "Petit, ComplexCon, AM Radio",
+    "date": "2026-10",
+    "kind": "production",
+    "location": "",
+    "sources": [
+      {
+        "camera": "Vixia",
+        "detail": "Bins 166 to 168",
+        "ingest": "done"
+      }
+    ],
+    "stages": {
+      "markers": "done",
+      "stringouts": "done",
+      "sync": "done",
+      "story_cut": "not_started"
+    },
+    "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni.",
+    "notes": "",
+    "number": 10,
+    "footage": {
+      "bins": 3,
+      "clips": 152,
+      "hours": 10.4,
+      "day_stringouts": 2,
+      "markers": 83,
+      "transcribed_pct": 100
+    },
+    "flag": ""
+  },
+  {
+    "id": "merc140",
+    "name": "Mercedes 140 Festival, Adidas HQ 1",
+    "date": "2026-10",
+    "kind": "production",
+    "location": "",
+    "sources": [
+      {
+        "camera": "Vixia",
+        "detail": "Bins 169 to 177",
+        "ingest": "done"
+      }
+    ],
+    "stages": {
+      "markers": "done",
+      "stringouts": "done",
+      "sync": "done",
+      "story_cut": "in_progress"
+    },
+    "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni.",
+    "notes": "",
+    "number": 11,
+    "footage": {
+      "bins": 9,
+      "clips": 229,
+      "hours": 18.9,
+      "day_stringouts": 6,
+      "markers": 260,
+      "transcribed_pct": 100
+    },
+    "flag": "Rough cut underway. Five clips are not on a stringout. GoPro stringout also built.",
+    "flag_level": "todo"
   },
   {
     "id": "birthday",
-    "name": "James 42nd Birthday",
+    "name": "James Birthday",
     "date": "2026-07",
     "kind": "supporting",
     "location": "James's mother's home",
     "sources": [
       {
         "camera": "Vixia",
-        "detail": "Jul 26, 2026 \u00b7 bin numbers to add",
+        "detail": "Bin 153",
         "ingest": "done"
       },
       {
         "camera": "iPhone",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       },
       {
         "camera": "Ray-Ban",
-        "detail": "Exporting from iCloud \u2014 needs a strong wifi connection",
+        "detail": "Exporting from iCloud — needs a strong wifi connection",
         "ingest": "in_progress"
       }
     ],
@@ -320,7 +470,7 @@
   },
   {
     "id": "la4",
-    "name": "LA - 4",
+    "name": "LA 4",
     "date": null,
     "kind": "planned",
     "location": "Los Angeles",
