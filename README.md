@@ -2,7 +2,7 @@
 
 Static site for Race Service leadership. Three pages share one stylesheet (`site.css`) and one helper (`common.js`):
 
-- `index.html` Start: what this is, what we have, the shoots so far, what it becomes, where Race Service comes in.
+- `index.html` Start: what this is, what we have, the shoots so far, what it becomes.
 - `footage.html` Footage: productions, then days, then a day's key moments and markers (`#/<production>/<day>`).
 - `pieces.html` Pieces: everything being cut, by type or production. `pieces.html#<pieceId>` opens a piece.
 

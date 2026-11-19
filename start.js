@@ -43,8 +43,6 @@
       ["RAW cuts","Multi-hour",["raw"],"Nearly uncut days with an audio pass and sensitive moments removed. First one: the Tutto Bene media day."],
       ["Clips and sizzle","10 to 90 sec",["clip","sizzle"],"BTS moments for social and a sizzle reel, pulled from the same marked footage."]];
 
-    var withRS=edited.filter(function(p){return p.stage==="rs_treatment"||p.stage==="rs_approval";}).length;
-    var rsLine=withRS?withRS+(withRS===1?" piece is":" pieces are")+" with Race Service now.":"Nothing is waiting on Race Service right now.";
 
     return ''+
     '<section class="sec"><div class="sec-head"><h2>What this is</h2></div>'+
@@ -64,10 +62,6 @@
 
     '<section class="sec"><div class="sec-head"><h2>What it becomes</h2></div><ul class="list">'+
       tiers.map(function(t){return '<li class="tier"><div class="tier-name">'+esc(t[0])+'<small>'+esc(t[1])+'</small></div><div>'+esc(t[3])+'<span class="tier-n">'+esc(tally(pieces,t[2]))+'</span></div></li>';}).join("")+'</ul></section>'+
-
-    '<section class="sec"><div class="sec-head"><h2>Where Race Service comes in</h2></div>'+
-      '<div class="card"><div class="pathway"><div>Rough cut<span class="who">EA Productions</span></div><span class="arrow">→</span><div class="is-rs">Treatment<span class="who">Carlos, Race Service</span></div><span class="arrow">→</span><div class="is-rs">Final approval<span class="who">Race Service</span></div><span class="arrow">→</span><div>Published<span class="who">YouTube</span></div></div>'+
-      '<p class="note" style="margin:6px 0 0">Race Service shapes every piece twice, at treatment and at final approval, and nothing publishes without it. '+esc(rsLine)+' Cuts, notes and approvals live in Frame.io.</p></div></section>'+
 
     '<section class="sec"><div class="sec-head"><h2>Go deeper</h2></div><div class="grid">'+
       '<a class="card" href="footage.html"><h3>The footage</h3><p class="summary">Every production, every day: how it is organized, with the key moments of each day.</p><span class="go">Open the footage →</span></a>'+
