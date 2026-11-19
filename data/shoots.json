@@ -27,7 +27,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
-      "icloud_export": "done"
+      "icloud_export": "done",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "Opens on iPhone and Ray-Ban. The Vixia is bought during this shoot, on camera, and used from here on.",
@@ -41,7 +42,8 @@
       "transcribed_pct": 97
     },
     "flag": "Bin 112_0821 media not on hand, unchecked.",
-    "flag_level": "todo"
+    "flag_level": "todo",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "nightschool",
@@ -93,7 +95,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "done",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "24 Hours of Daytona.",
@@ -107,7 +110,8 @@
       "transcribed_pct": 100
     },
     "flag": "Bin 117_0122 is a one-clip stub.",
-    "flag_level": "info"
+    "flag_level": "info",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "ger1",
@@ -137,7 +141,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "",
@@ -151,7 +156,8 @@
       "transcribed_pct": 98
     },
     "flag": "One clip (MVI_0379) is not on a stringout.",
-    "flag_level": "todo"
+    "flag_level": "todo",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "la2",
@@ -181,7 +187,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "Podcast, AMG prep meeting, Rise n' Shine, Carlos workflow meeting. Spine of the AMG 1 story.",
@@ -194,7 +201,8 @@
       "markers": 63,
       "transcribed_pct": 98
     },
-    "flag": ""
+    "flag": "",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "la3",
@@ -224,7 +232,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "AMG 4-door electric coupe launch.",
@@ -237,7 +246,8 @@
       "markers": 67,
       "transcribed_pct": 99
     },
-    "flag": ""
+    "flag": "",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "lemans",
@@ -267,7 +277,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "done",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "",
@@ -281,7 +292,8 @@
       "transcribed_pct": 99
     },
     "flag": "Premiere export error: the stringout export for this production predates bins 139, 140 and 146 (167 clips, including the race itself). The day pages and counts leave those bins out until it is re-exported.",
-    "flag_level": "issue"
+    "flag_level": "issue",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "monterey",
@@ -311,7 +323,8 @@
       "stringouts": "done",
       "sync": "issue",
       "story_cut": "not_started",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Shotgun hard-synced into the Vixia; lav running free (no hard sync).",
     "notes": "",
@@ -324,7 +337,8 @@
       "markers": 51,
       "transcribed_pct": 100
     },
-    "flag": ""
+    "flag": "",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "tutto",
@@ -354,7 +368,8 @@
       "stringouts": "done",
       "sync": "done",
       "story_cut": "in_progress",
-      "icloud_export": "not_started"
+      "icloud_export": "not_started",
+      "backup": "done"
     },
     "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni. Sync issue solved from here on.",
     "notes": "",
@@ -368,7 +383,8 @@
       "transcribed_pct": 98
     },
     "flag": "Premiere export error: markers on Days 1 to 3 (bins 157 to 160) exist in Premiere but will not export. EA is resolving. Marker count is partial for those bins.",
-    "flag_level": "issue"
+    "flag_level": "issue",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "petit",
@@ -387,7 +403,8 @@
       "markers": "done",
       "stringouts": "done",
       "sync": "done",
-      "story_cut": "not_started"
+      "story_cut": "not_started",
+      "backup": "done"
     },
     "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni.",
     "notes": "",
@@ -400,7 +417,8 @@
       "markers": 83,
       "transcribed_pct": 100
     },
-    "flag": ""
+    "flag": "",
+    "backup_note": "Raw Copy drive (20 TB)."
   },
   {
     "id": "merc140",
@@ -419,7 +437,8 @@
       "markers": "done",
       "stringouts": "done",
       "sync": "done",
-      "story_cut": "in_progress"
+      "story_cut": "in_progress",
+      "backup": "done"
     },
     "sync_note": "Zoom H6 with hard sync across all mics, plus the onboard omni.",
     "notes": "",
@@ -433,7 +452,8 @@
       "transcribed_pct": 100
     },
     "flag": "Rough cut underway. Five clips are not on a stringout. GoPro stringout also built.",
-    "flag_level": "todo"
+    "flag_level": "todo",
+    "backup_note": "2 TB SanDisk SSD."
   },
   {
     "id": "birthday",

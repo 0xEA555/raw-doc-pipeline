@@ -97,7 +97,7 @@ a.card:hover,button.card:hover{ border-color:var(--rs-blue); box-shadow:0 0 0 2p
 
 /* ---- matrix (productions x steps) ---- */
 .mx{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; }
-.mx-head,.mx-row{ display:grid; grid-template-columns:minmax(220px,1.7fr) repeat(5,minmax(92px,1fr)) 96px; align-items:center; gap:0 8px; padding:0 16px; }
+.mx-head,.mx-row{ display:grid; grid-template-columns:minmax(220px,1.7fr) repeat(6,minmax(84px,1fr)) 96px; align-items:center; gap:0 8px; padding:0 16px; }
 .mx-head{ background:var(--rs-deep); color:#fff; padding-top:12px; padding-bottom:12px; align-items:start; }
 .mx-h b{ display:block; font:400 12px var(--display); letter-spacing:.04em; text-transform:uppercase; }
 .mx-h span{ display:block; font:400 12px/1.35 var(--mono); color:#B7D2E4; margin-top:4px; }

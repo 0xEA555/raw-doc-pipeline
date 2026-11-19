@@ -3,6 +3,7 @@ window.RS=(function(){
   var STEP={done:["Done","st-done"],in_progress:["In progress","st-prog"],not_started:["Not yet","st-none"],issue:["Issue","st-issue"]};
   var COLS=[
     {key:"ingest",label:"Ingested",tip:"Camera footage copied, organized by bin and backed up."},
+    {key:"backup",label:"Backed up",tip:"A second copy of the footage on a separate drive."},
     {key:"stringouts",label:"Stringouts",tip:"Each natural day built into one uncut stringout, in shooting order."},
     {key:"markers",label:"Markers",tip:"Story moments flagged in the footage by the editor."},
     {key:"transcripts",label:"Transcripts",tip:"Dialogue transcribed inside the edit project, so lines can be searched."},

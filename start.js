@@ -10,7 +10,7 @@
 
   function render(shoots,pieces,attn){
     var fs=R.prods(shoots),N=fs.length;
-    var foot=["ingest","stringouts","markers","transcripts"].map(function(k){
+    var foot=["ingest","backup","stringouts","markers","transcripts"].map(function(k){
       var t=count(fs,k),c=R.COLS.filter(function(c){return c.key===k;})[0];
       return meter(c.label,t.done,t.in_progress,t.issue,N,detail(t,N));
     }).join("");

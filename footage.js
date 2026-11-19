@@ -31,7 +31,7 @@
     }).join("");
     var defs='<dl class="defs">'+R.COLS.map(function(c){return '<div><dt>'+esc(c.label)+'</dt><dd>'+esc(c.tip)+'</dd></div>';}).join("")+'</dl>';
     return '<section class="sec"><div class="sec-head"><h2>Where every production stands<span class="count">'+list.length+'</span></h2></div>'+
-      '<p class="note">Every production moves through the same five steps. Read across a row to see how far one has come, or down a column to see where the work is. Open a production to see its days and the pieces cut from it.</p>'+
+      '<p class="note">Every production moves through the same six steps. Read across a row to see how far one has come, or down a column to see where the work is. Open a production to see its days and the pieces cut from it.</p>'+
       '<div class="mx"><div class="mx-head"><div></div>'+head+'<div></div></div>'+rows+'</div>'+
       '<p class="note" style="margin-top:12px">Ingested covers the main camera footage. iPhone and Ray-Ban footage is exported from iCloud separately and is still coming in for some productions.</p>'+
       '<details class="more"><summary>What each step means</summary>'+defs+'</details></section>';
@@ -46,7 +46,7 @@
 
   function statusRow(s){
     return '<div class="mx mx-one"><div class="mx-head"><div></div>'+R.COLS.map(function(c){return '<div class="mx-h"><b>'+esc(c.label)+'</b></div>';}).join("")+'<div></div></div>'+
-      '<div class="mx-row"><div class="mx-name"><div class="mx-sub">'+esc(sub(s))+'</div></div>'+R.COLS.map(function(c){return '<div class="mx-c">'+R.pill(s,c.key)+'</div>';}).join("")+'<div></div>'+(s.flag?'<div class="mx-flag'+(s.flag_level==="issue"?' is-issue':'')+'">'+esc(s.flag)+'</div>':'')+'</div></div>';
+      '<div class="mx-row"><div class="mx-name"><div class="mx-sub">'+esc(sub(s))+'</div></div>'+R.COLS.map(function(c){return '<div class="mx-c">'+R.pill(s,c.key)+'</div>';}).join("")+'<div></div>'+(s.backup_note?'<div class="mx-flag">Backup: '+esc(s.backup_note)+'</div>':'')+(s.flag?'<div class="mx-flag'+(s.flag_level==="issue"?' is-issue':'')+'">'+esc(s.flag)+'</div>':'')+'</div></div>';
   }
 
   function viewProduction(id){
