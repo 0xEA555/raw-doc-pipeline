@@ -248,3 +248,18 @@ dialog#card-dialog::backdrop{ background:rgba(7,23,34,.55); }
 .footer-maker b{ display:block; color:var(--ink); font-size:13px; }
 .footer-nav{ display:flex; gap:16px; flex-wrap:wrap; } .footer-nav a{ font-weight:700; text-decoration:none; }
 .grid .card .summary{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+
+/* Start page: leadership view */
+.glance{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; }
+.glance .g{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:14px 16px; display:grid; gap:4px; align-content:start; }
+.glance .g b{ font:400 30px/1 var(--display); color:var(--blue,#0B5A8C); }
+.glance .gl{ font-weight:700; font-size:14px; }
+.glance .gd{ color:var(--soft); font-size:13px; line-height:1.4; }
+.road{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; }
+.road-row{ display:grid; grid-template-columns:36px 1fr 150px 190px; gap:14px; align-items:center; padding:12px 16px; border-top:1px solid var(--line); color:inherit; text-decoration:none; }
+.road-row:first-child{ border-top:none; } .road-row:hover{ background:color-mix(in srgb, var(--card) 92%, var(--blue,#0B5A8C)); }
+.rn b{ display:block; font-weight:700; } .rn small{ display:block; font:400 12px var(--mono); color:var(--soft); margin-top:2px; }
+.rs{ font:400 12px var(--mono); color:var(--soft); } .rp{ font-weight:700; font-size:13px; display:flex; align-items:center; gap:7px; }
+@media (max-width:700px){ .road-row{ grid-template-columns:36px 1fr; } .rs,.rp{ grid-column:2; } }
+.tier-n{ display:block; font:400 12px var(--mono); color:var(--soft); margin-top:4px; }
+.pathway .is-rs{ outline:2px solid var(--yellow,#FFD23F); outline-offset:4px; border-radius:8px; }
