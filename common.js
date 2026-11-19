@@ -25,7 +25,7 @@ window.RS=(function(){
   function fmtDate(d){if(!d)return "Date TBD";var p=d.split("-");return MONTHS[+p[1]-1]+" "+p[0];}
   function prods(shoots){return shoots.filter(function(s){return s.footage;}).sort(function(a,b){return (a.number||99)-(b.number||99);});}
   function state(s,key){
-    if(key==="ingest"){var vx=(s.sources||[]).filter(function(x){return x.camera==="Vixia";});return vx.length&&vx.every(function(x){return x.ingest==="done";})?"done":"in_progress";}
+    if(key==="ingest"){if(!s.footage||!s.footage.clips)return "not_started";var vx=(s.sources||[]).filter(function(x){return x.camera==="Vixia";});return vx.length&&vx.every(function(x){return x.ingest==="done";})?"done":"in_progress";}
     if(key==="transcripts"){var t=s.footage.transcribed_pct;return t>=98?"done":t>0?"in_progress":"not_started";}
     return (s.stages||{})[key]||"not_started";
   }

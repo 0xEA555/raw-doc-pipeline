@@ -11,7 +11,7 @@
   function crumbs(parts){
     document.getElementById("crumbs").innerHTML=parts.map(function(p){return p[1]?'<a href="'+p[1]+'">'+esc(p[0])+'</a>':'<span>'+esc(p[0])+'</span>';}).join('<i>/</i>');
   }
-  function sub(s){var f=s.footage;return R.fmtDate(s.date)+' · '+f.bins+(f.bins===1?' bin':' bins')+' · '+n(f.clips)+' clips · '+f.hours.toFixed(1)+' h · '+f.day_stringouts+(f.day_stringouts===1?' day':' days')+' · '+n(f.markers)+' markers';}
+  function sub(s){var f=s.footage;if(!f.clips)return 'Underway · '+(s.dates||R.fmtDate(s.date))+' · No footage yet';return R.fmtDate(s.date)+' · '+f.bins+(f.bins===1?' bin':' bins')+' · '+n(f.clips)+' clips · '+f.hours.toFixed(1)+' h · '+f.day_stringouts+(f.day_stringouts===1?' day':' days')+' · '+n(f.markers)+' markers';}
   function piecesOf(id){return pieces.filter(function(p){return p.type!=="spine"&&R.rootShoot(p,byPiece,byShoot)===id;});}
 
   function viewProductions(){
@@ -27,7 +27,7 @@
       return '<a class="mx-row is-link'+(issue?' has-issue':'')+'" href="#/'+esc(s.id)+'">'+
         '<div class="mx-name"><div class="mx-title">'+(s.number?'<span class="num">'+s.number+'</span>':'')+esc(s.name)+'</div><div class="mx-sub">'+esc(sub(s))+'</div></div>'+
         R.COLS.map(function(c){return '<div class="mx-c">'+R.pill(s,c.key)+'</div>';}).join("")+
-        '<div class="mx-go">Open →</div>'+(s.flag?'<div class="mx-flag'+(issue?' is-issue':'')+'">'+esc(s.flag)+'</div>':'')+'</a>';
+        '<div class="mx-go">Open →</div>'+(s.flag?'<div class="mx-flag'+(s.flag_level==="issue"?' is-issue':'')+'">'+esc(s.flag)+'</div>':'')+'</a>';
     }).join("");
     var defs='<dl class="defs">'+R.COLS.map(function(c){return '<div><dt>'+esc(c.label)+'</dt><dd>'+esc(c.tip)+'</dd></div>';}).join("")+'</dl>';
     return '<section class="sec"><div class="sec-head"><h2>Where every production stands<span class="count">'+list.length+'</span></h2></div>'+
@@ -53,11 +53,13 @@
     var s=byShoot[id];if(!s||!s.footage)return viewProductions();
     var D=days[id];
     crumbs([["Footage","#/"],[s.name]]);
-    var h='<section class="sec"><div class="sec-head"><h2>'+(s.number?'<span class="num">'+s.number+'</span>':'')+esc(s.name)+'</h2><span class="sec-meta">'+esc(R.fmtDate(s.date))+(s.location?' · '+esc(s.location):'')+'</span></div>'+statusRow(s)+'</section>';
+    var h='<section class="sec"><div class="sec-head"><h2>'+(s.number?'<span class="num">'+s.number+'</span>':'')+esc(s.name)+'</h2><span class="sec-meta">'+esc(s.footage&&!s.footage.clips?'Underway · '+(s.dates||R.fmtDate(s.date)):R.fmtDate(s.date))+(s.location?' · '+esc(s.location):'')+'</span></div>'+statusRow(s)+'</section>';
     if(D){
       h+='<section class="sec"><div class="sec-head"><h2>Days<span class="count">'+D.days.length+'</span></h2></div>'+
         '<p class="note">One uncut stringout for each natural day, wake to sleep. The bar is the day, with a tick wherever a marker sits. Summaries are written from the markers, and from transcripts where a day has no markers.</p><div class="grid">'+
         D.days.map(function(d){return '<a class="card" href="#/'+esc(id)+'/'+d.day+'"><h3><span class="num">Day '+d.day+'</span>'+esc(d.title)+'</h3><div class="meta">'+esc(d.label)+'</div>'+timeline(d,true)+'<div class="meta">'+d.clips+' clips · '+d.hours.toFixed(1)+' h · '+d.markers+' markers</div><p class="summary">'+esc(d.summary)+'</p><span class="go">Open the day →</span></a>';}).join("")+'</div></section>';
+    } else if(!s.footage.clips){
+      h+='<section class="sec"><div class="sec-head"><h2>Days<span class="count">0</span></h2></div><p class="note">This production is underway. Days appear here once the footage is in.</p></section>';
     } else {
       h+='<section class="sec"><div class="sec-head"><h2>Days<span class="count">'+s.footage.day_stringouts+'</span></h2></div>'+
         '<p class="note">'+s.footage.day_stringouts+' day stringouts are built for this production. The day-by-day view with markers and key moments is not published yet.</p></section>';
